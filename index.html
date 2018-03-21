@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Js-gladiator by ga-wdi-exercises</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Js-gladiator</h1>
+        <p>ES6 Classes and OOP Lab</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://git.generalassemb.ly/ga-wdi-exercises/js-gladiator" class="button fork"><strong>View On GitHub</strong></a>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>
+<a id="js-gladiator-arena" class="anchor" href="#js-gladiator-arena" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>JS Gladiator Arena</h1>
+<p>The Emperor has commissioned you to build a Gladiator Arena. You will do so using your knowledge of object-oriented Javascript and ES6 classes.</p>
+<p>All of your Javascript code will be written in <code>gladiator.js</code> and <code>arena.js</code>. You can test your code by opening <code>index.html</code> in the browser and interacting with the console.</p>
+<h2>
+<a id="part-1-the-gladiator" class="anchor" href="#part-1-the-gladiator" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Part 1: The Gladiator</h2>
+<p>Create a <code>Gladiator</code> class that has the following properties...</p>
+<ul>
+<li>a <code>name</code>
+</li>
+<li>a <code>weapon</code> (one of Spear, Club, Trident)</li>
+</ul>
+<p>Once defined, you should be able to do the following...</p>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> max <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Gladiator</span>(<span class="pl-s"><span class="pl-pds">"</span>Maximus<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>Trident<span class="pl-pds">"</span></span>)
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">max</span>.<span class="pl-c1">name</span>) <span class="pl-c"><span class="pl-c">//</span> "Maximus"</span>
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">max</span>.<span class="pl-smi">weapon</span>) <span class="pl-c"><span class="pl-c">//</span> "Trident"</span></pre></div>
+<h3>
+<a id="bonus" class="anchor" href="#bonus" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bonus</h3>
+<p>Make it so that you cannot assign a Gladiator an invalid weapon (i.e., anything aside from Spear, Club or Trident. That means running code like <code>new Gladiator("Jesse", "Taco")</code> would throw an error</p>
+<h2>
+<a id="part-2-the-arena" class="anchor" href="#part-2-the-arena" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Part 2: The Arena</h2>
+<p>Create an <code>Arena</code> class that meets the following criteria...</p>
+<h3>
+<a id="an-arena-has-a-name" class="anchor" href="#an-arena-has-a-name" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>An arena has a name</h3>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> colosseum <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Arena</span>(<span class="pl-s"><span class="pl-pds">"</span>Colosseum<span class="pl-pds">"</span></span>)
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">colosseum</span>.<span class="pl-c1">name</span>) <span class="pl-c"><span class="pl-c">//</span> =&gt; Colosseum</span></pre></div>
+<h3>
+<a id="the-name-should-be-capitalized" class="anchor" href="#the-name-should-be-capitalized" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The name should be capitalized</h3>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> colosseum <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Arena</span>(<span class="pl-s"><span class="pl-pds">"</span>megalopolis<span class="pl-pds">"</span></span>)
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">colosseum</span>.<span class="pl-c1">name</span>) <span class="pl-c"><span class="pl-c">//</span> =&gt; Megalopolis</span></pre></div>
+<h3>
+<a id="an-arena-can-have-gladiators" class="anchor" href="#an-arena-can-have-gladiators" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>An arena can have gladiators</h3>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> colosseum <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Arena</span>(<span class="pl-s"><span class="pl-pds">"</span>Colosseum<span class="pl-pds">"</span></span>)
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">colosseum</span>.<span class="pl-smi">gladiators</span>) <span class="pl-c"><span class="pl-c">//</span> =&gt; []</span></pre></div>
+<h3>
+<a id="you-can-add-a-gladiator-to-the-arena" class="anchor" href="#you-can-add-a-gladiator-to-the-arena" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>You can add a gladiator to the arena</h3>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> max <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Gladiator</span>(<span class="pl-s"><span class="pl-pds">"</span>Maximus<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>Trident<span class="pl-pds">"</span></span>)
+<span class="pl-k">var</span> colosseum <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Arena</span>(<span class="pl-s"><span class="pl-pds">"</span>Colosseum<span class="pl-pds">"</span></span>)
+<span class="pl-smi">colosseum</span>.<span class="pl-en">addGladiator</span>(max)
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">colosseum</span>.<span class="pl-smi">gladiators</span>) <span class="pl-c"><span class="pl-c">//</span> =&gt; [Gladiator]</span></pre></div>
+<h3>
+<a id="the-arena-should-never-have-more-than-2-gladiators-in-it-at-a-time" class="anchor" href="#the-arena-should-never-have-more-than-2-gladiators-in-it-at-a-time" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The arena should never have more than 2 gladiators in it at a time</h3>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> max <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Gladiator</span>(<span class="pl-s"><span class="pl-pds">"</span>Maximus<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>Trident<span class="pl-pds">"</span></span>)
+<span class="pl-k">var</span> titus <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Gladiator</span>(<span class="pl-s"><span class="pl-pds">"</span>Titus<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>Sword<span class="pl-pds">"</span></span>)
+<span class="pl-k">var</span> andronicus <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Gladiator</span>(<span class="pl-s"><span class="pl-pds">"</span>Andronicus<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>Sword<span class="pl-pds">"</span></span>)
+<span class="pl-k">var</span> colosseum <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Arena</span>(<span class="pl-s"><span class="pl-pds">"</span>Colosseum<span class="pl-pds">"</span></span>)
+<span class="pl-smi">colosseum</span>.<span class="pl-en">addGladiator</span>(max)
+<span class="pl-smi">colosseum</span>.<span class="pl-en">addGladiator</span>(titus)
+<span class="pl-smi">colosseum</span>.<span class="pl-en">addGladiator</span>(andronicus)
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">colosseum</span>.<span class="pl-smi">gladiators</span>.<span class="pl-c1">length</span>) <span class="pl-c"><span class="pl-c">//</span> =&gt; 2</span></pre></div>
+<h3>
+<a id="if-there-are-two-gladiators-in-the-arena-you-can-call-a-fight-method-that-results-in-the-elimination-of-one-of-the-gladiators-from-the-arena" class="anchor" href="#if-there-are-two-gladiators-in-the-arena-you-can-call-a-fight-method-that-results-in-the-elimination-of-one-of-the-gladiators-from-the-arena" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>If there are two gladiators in the arena, you can call a <code>fight</code> method that results in the elimination of one of the gladiators from the arena.</h3>
+<p>Winning conditions</p>
+<ul>
+<li>Trident beats Spear</li>
+<li>Spear beats Club</li>
+<li>Club beats Trident</li>
+<li>If the two gladiators have the same weapon, they are both eliminated.</li>
+</ul>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> max <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Gladiator</span>(<span class="pl-s"><span class="pl-pds">"</span>Maximus<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>Trident<span class="pl-pds">"</span></span>)
+<span class="pl-k">var</span> titus <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Gladiator</span>(<span class="pl-s"><span class="pl-pds">"</span>Titus<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>Spear<span class="pl-pds">"</span></span>)
+<span class="pl-k">var</span> colosseum <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Arena</span>(<span class="pl-s"><span class="pl-pds">"</span>Colosseum<span class="pl-pds">"</span></span>)
+<span class="pl-smi">colosseum</span>.<span class="pl-en">addGladiator</span>(max)
+<span class="pl-smi">colosseum</span>.<span class="pl-en">addGladiator</span>(titus)
+<span class="pl-smi">colosseum</span>.<span class="pl-en">fight</span>()
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">colosseum</span>.<span class="pl-smi">gladiators</span>) <span class="pl-c"><span class="pl-c">//</span> =&gt; [max]</span></pre></div>
+<h3>
+<a id="bonus-1" class="anchor" href="#bonus-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bonus</h3>
+<ul>
+<li>Add a method to remove gladiators from the arena by name</li>
+<li>Update your winning conditions so that if the gladiator named "Maximus" is in the fight, he wins.</li>
+<li>Add a method to check to see if the crowd is entertained (<code>.entertained?</code>). The crowd is only entertained if Maximus is in the arena.</li>
+<li>Before a losing gladiator is eliminated, the user should be prompted to put their thumbs up or down. If user votes down, the losing gladiator is removed. If the user votes up, the gladiator stays in the arena and his opponent is removed. (Life isn't fair.)</li>
+</ul>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://git.generalassemb.ly/ga-wdi-exercises">ga-wdi-exercises</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
